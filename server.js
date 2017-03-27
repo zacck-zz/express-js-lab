@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+const PORT = 3000;
+
 
 //this takes a route and a functio that takes in a request and response
 // app.get('/',(req, res) => {
@@ -17,4 +19,7 @@ var path = require('path');
 app.use(express.static(__dirname  + '/public'));
 
 //listen give the app an port to listenm to
-app.listen(3000);
+//takes in a port and a function to call when the server starts
+app.listen(PORT, () =>{
+  console.log(`Express Server Running on ${PORT}`);
+});
