@@ -12,7 +12,8 @@ var middleware = {
     next();
   },
   logger: (req, res, next) => {
-    console.log(req.method);
+    const date = new Date().toString();
+    console.log(`Request ${req.method}  ${req.originalUrl} ${date}`);
     next();
   }
 }
