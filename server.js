@@ -6,7 +6,7 @@ const PORT = 3000;
 
 
 //build some middleware
-var middleware = require('middleware');
+var middleware = require('./middleware.js');
 //this is application level middleware i.e for everyroute
 app.use(middleware.logger);
 
